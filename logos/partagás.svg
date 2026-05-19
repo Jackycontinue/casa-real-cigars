@@ -1,6 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
-  <circle cx="20" cy="20" r="18" fill="#C62828" opacity="0.15"/>
-  <circle cx="20" cy="20" r="18" fill="none" stroke="#C62828" stroke-width="1.5" opacity="0.6"/>
-  <text x="20" y="20" text-anchor="middle" dominant-baseline="central" 
-        font-family="Georgia,serif" font-size="16" font-weight="bold" fill="#FFCDD2" opacity="0.9">P</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
+  <rect width="200" height="40" fill="transparent"/>
+  <text x="100.0" y="24" text-anchor="middle" dominant-baseline="central" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#C62828" letter-spacing="4">PARTAGÁS</text>
 </svg>

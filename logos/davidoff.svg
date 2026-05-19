@@ -1,6 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
-  <circle cx="20" cy="20" r="18" fill="#F9A825" opacity="0.15"/>
-  <circle cx="20" cy="20" r="18" fill="none" stroke="#F9A825" stroke-width="1.5" opacity="0.6"/>
-  <text x="20" y="20" text-anchor="middle" dominant-baseline="central" 
-        font-family="Georgia,serif" font-size="16" font-weight="bold" fill="#FFF9C4" opacity="0.9">D</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
+  <rect width="200" height="40" fill="transparent"/>
+  <text x="100.0" y="24" text-anchor="middle" dominant-baseline="central" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="300" fill="#FDD835" letter-spacing="6">DAVIDOFF</text>
 </svg>
