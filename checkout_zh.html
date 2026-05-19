@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>结算 — Casa Real 雪茄</title>
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d0d0d;--card:#1a1a1a;--gold:#c9a84c;--gold-dim:#a08536;--text:#e8e0d0;--muted:#8a8272;--border:#2a2520;--input-bg:#141414}
+body{font-family:'Helvetica Neue','Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:2rem 1rem}
+.container{max-width:580px;margin:0 auto}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;color:var(--muted);text-decoration:none;font-size:.85rem;margin-bottom:2rem;transition:color .3s}
+.back-link:hover{color:var(--gold)}
+h1{font-size:1.8rem;font-weight:300;letter-spacing:3px;margin-bottom:.3rem;color:var(--text)}
+.divider{width:60px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:1rem 0 2rem}
+.order-summary{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.5rem;margin-bottom:2rem}
+.order-summary h2{font-size:.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:1rem}
+.summary-row{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--border)}
+.summary-row:last-child{border-bottom:none}
+.summary-label{color:var(--muted);font-size:.85rem}
+.summary-value{font-weight:600;font-size:.95rem}
+.summary-value.price{color:var(--gold);font-size:1.2rem}
+.section-title{font-size:.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:1rem;margin-top:.5rem}
+.form-group{margin-bottom:1.2rem}
+.form-group label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:.4rem;letter-spacing:.5px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:.7rem 1rem;background:var(--input-bg);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:.9rem;transition:border-color .3s;outline:none}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-row{display:flex;gap:1rem}
+.form-row .form-group{flex:1}
+.submit-btn{width:100%;padding:.9rem;background:var(--gold);color:#1a1a1a;font-weight:700;font-size:.95rem;border:none;border-radius:4px;letter-spacing:1px;cursor:pointer;transition:all .3s;margin-top:1rem}
+.submit-btn:hover{background:#d4a843;transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.3)}
+.notice{text-align:center;color:var(--muted);font-size:.78rem;margin-top:2rem;line-height:1.6}
+.fade-up{opacity:0;transform:translateY(20px);animation:fadeUp .8s ease forwards}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="container">
+  <a class="back-link fade-up" href="javascript:history.back()">← 返回</a>
+  <h1 class="fade-up">订单结算</h1>
+  <div class="divider"></div>
+
+  <div class="order-summary fade-up" style="animation-delay:.1s">
+    <h2>订单详情</h2>
+    <div class="summary-row">
+      <span class="summary-label">品牌</span>
+      <span class="summary-value" id="s-brand">—</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-label">产品</span>
+      <span class="summary-value" id="s-name">—</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-label">产地</span>
+      <span class="summary-value" id="s-origin">—</span>
+    </div>
+    <div class="summary-row">
+      <span class="summary-label">价格（整盒 / 10支）</span>
+      <span class="summary-value price" id="s-price">—</span>
+    </div>
+  </div>
+
+  <div class="fade-up" style="animation-delay:.2s">
+    <p class="section-title">联系信息</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>姓名</label>
+        <input type="text" placeholder="您的姓名">
+      </div>
+      <div class="form-group">
+        <label>电话</label>
+        <input type="tel" placeholder="手机号码">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>邮箱</label>
+      <input type="email" placeholder="电子邮箱">
+    </div>
+  </div>
+
+  <div class="fade-up" style="animation-delay:.3s">
+    <p class="section-title">收货地址</p>
+    <div class="form-group">
+      <label>详细地址</label>
+      <input type="text" placeholder="街道地址">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>城市</label>
+        <input type="text" placeholder="城市">
+      </div>
+      <div class="form-group">
+        <label>省份</label>
+        <input type="text" placeholder="省份">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>邮编</label>
+      <input type="text" placeholder="邮政编码">
+    </div>
+  </div>
+
+  <div class="fade-up" style="animation-delay:.4s">
+    <p class="section-title">备注</p>
+    <div class="form-group">
+      <textarea placeholder="特殊要求或备注（选填）"></textarea>
+    </div>
+  </div>
+
+  <button class="submit-btn fade-up" style="animation-delay:.5s" onclick="handleSubmit(event)">提交订单</button>
+  <p class="notice fade-up" style="animation-delay:.6s">在线支付功能即将上线。<br>提交订单后，客服将与您联系完成支付。</p>
+</div>
+
+<script>
+var params=new URLSearchParams(window.location.search);
+document.getElementById('s-brand').textContent=params.get('brand')||'—';
+document.getElementById('s-name').textContent=params.get('name')||'—';
+document.getElementById('s-origin').textContent=params.get('origin')||'—';
+document.getElementById('s-price').textContent=params.get('price')||'—';
+document.title=(params.get('brand')||'结算')+' — Casa Real 雪茄';
+
+function handleSubmit(e){
+  e.preventDefault();
+  alert('订单已提交！客服将尽快与您联系完成支付。感谢选择 Casa Real。');
+  window.location.href='zh.html';
+}
+</script>
+</body>
+</html>
