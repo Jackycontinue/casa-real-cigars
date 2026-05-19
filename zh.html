@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CASA REAL — Premium Cigars Since 1887</title>
+<title>CASA REAL — 始于1887的顶级雪茄</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -383,20 +383,15 @@ footer{
 
 /* ===== LANGUAGE SWITCHER ===== */
 .lang-switch{
-  display:inline-flex;align-items:center;gap:.4rem;
-  padding:.3rem .6rem;border:1px solid var(--border);
+  display:flex;align-items:center;gap:.5rem;
+  padding:.35rem .7rem;border:1px solid var(--border);
   background:transparent;cursor:pointer;border-radius:3px;
-  transition:all .3s ease;text-decoration:none;
+  transition:all .3s ease;margin-left:.5rem;
 }
 .lang-switch:hover{border-color:var(--gold)}
-.lang-switch .lang-text{font-size:.75rem;letter-spacing:.08em;color:var(--dim);font-weight:500;transition:color .3s}
-.lang-switch:hover .lang-text{color:var(--gold)}
+.lang-switch .lang-text{font-size:.75rem;letter-spacing:.08em;color:var(--muted);font-weight:500}
 .lang-switch .lang-active{color:var(--gold);font-weight:600}
-.lang-switch .lang-sep{color:var(--dim);font-size:.65rem;opacity:.5}
-
-@media(max-width:768px){
-  .lang-switch{margin-top:.5rem;padding:.4rem .8rem}
-}
+.lang-switch .lang-sep{color:var(--dim);font-size:.7rem}
 </style>
 </head>
 <body>
@@ -406,14 +401,14 @@ footer{
   <div class="container">
     <a href="#hero" class="nav-brand">CASA REAL</a>
     <div class="nav-links" id="navLinks">
-      <a href="#heritage">Heritage</a>
-      <a href="#collection">Collection</a>
-      <a href="#craftsmanship">Craftsmanship</a>
-      <a href="#tasting">Tasting Notes</a>
-      <a href="#contact">Lounge</a>
-      <a href="zh.html" class="lang-switch" title="切换中文"><span class="lang-text lang-active">EN</span><span class="lang-sep">|</span><span class="lang-text">中</span></a>
+      <a href="#heritage">品牌传承</a>
+      <a href="#collection">全部产品</a>
+      <a href="#craftsmanship">匠心工艺</a>
+      <a href="#tasting">品鉴指南</a>
+      <a href="#contact">雪茄会所</a>
+      <a href="index.html" class="lang-switch" title="中文"><span class="lang-text">EN</span><span class="lang-sep">|</span><span class="lang-text lang-active">中</span></a>
     </div>
-    <a href="zh.html" class="lang-switch" title="切换中文"><span class="lang-text lang-active">EN</span><span class="lang-sep">|</span><span class="lang-text">中</span></a>
+    <a href="index.html" class="lang-switch" title="中文"><span class="lang-text">EN</span><span class="lang-sep">|</span><span class="lang-text lang-active">中</span></a>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -423,35 +418,35 @@ footer{
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
   <div class="hero-content fade-up">
-    <p class="hero-est">— Est. 1887 —</p>
+    <p class="hero-est">— 始于 1887 —</p>
     <h1 class="hero-title">CASA REAL</h1>
     <div class="divider"></div>
-    <p class="hero-tagline">A Legacy of Fine Cigars — Handcrafted with Passion Since the 19th Century</p>
-    <a href="#collection" class="btn">Explore Collection</a>
+    <p class="hero-tagline">一个多世纪的雪茄传奇 — 始于19世纪的手工匠心传承</p>
+    <a href="#collection" class="btn">探索全部产品</a>
   </div>
 </section>
 
 <!-- ===== HERITAGE ===== -->
 <section class="heritage" id="heritage">
   <div class="container">
-    <h2 class="section-title fade-up">Our Heritage</h2>
+    <h2 class="section-title fade-up">品牌传承</h2>
     <div class="divider fade-up"></div>
-    <p class="section-subtitle fade-up">For over a century, Casa Real has embodied the art of premium cigar making — from seed to smoke.</p>
+    <p class="section-subtitle fade-up">超过一个世纪以来，Casa Real 始终代表着顶级雪茄制作的艺术——从烟叶种植到成品品鉴。</p>
     <div class="heritage-grid">
       <div class="heritage-card fade-up">
         <span class="heritage-icon">🌿</span>
-        <h3>Finest Tobacco</h3>
-        <p>We source exclusively from the world's most celebrated growing regions — Vuelta Abajo in Cuba, Cibao Valley in the Dominican Republic, and Estelí in Nicaragua. Each leaf is hand-selected for its exceptional quality and flavor profile.</p>
+        <h3>顶级烟叶</h3>
+        <p>我们只从世界上最负盛名的产区采购烟叶——古巴 Vuelta Abajo、多米尼加 Cibao Valley 以及尼加拉瓜 Estelí。每一片烟叶都经过人工甄选，确保卓越品质与风味。</p>
       </div>
       <div class="heritage-card fade-up">
         <span class="heritage-icon">🤲</span>
-        <h3>Master Torcedores</h3>
-        <p>Our cigars are crafted by master rollers, each with decades of experience. Every Casa Real cigar is shaped by hand, ensuring the perfect draw, even burn, and impeccable construction that defines luxury.</p>
+        <h3>大师卷制</h3>
+        <p>我们的雪茄由经验数十年的大师级卷烟师手工制作。每一支 Casa Real 雪茄都经过纯手工卷制，确保完美的抽吸感、均匀的燃烧以及无可挑剔的结构——这就是奢华的定义。</p>
       </div>
       <div class="heritage-card fade-up">
         <span class="heritage-icon">⏳</span>
-        <h3>Patient Aging</h3>
-        <p>Time is the most crucial ingredient. Our cigars rest in Spanish cedar-lined aging rooms for 12 to 60 months, allowing the tobaccos to marry and develop the refined complexity that connoisseurs treasure.</p>
+        <h3>耐心陈化</h3>
+        <p>时间是最关键的原料。我们的雪茄在西班牙雪松木陈化室中静置12至60个月，让烟叶充分融合，发展出鉴赏家所珍视的精妙复杂度。</p>
       </div>
     </div>
   </div>
@@ -460,9 +455,9 @@ footer{
 <!-- ===== COLLECTION ===== -->
 <section class="collection" id="collection">
   <div class="container">
-    <h2 class="section-title fade-up">The Collection</h2>
+    <h2 class="section-title fade-up">全部产品</h2>
     <div class="divider fade-up"></div>
-    <p class="section-subtitle fade-up">来自世界顶级雪茄产区的经典品牌，每一支都是匠心与时间的杰作。</p>
+    <p class="section-subtitle fade-up">甄选世界顶级雪茄产区的经典品牌，每一支都是匠心与时间的杰作。</p>
 
     <div class="category-filter fade-up">
       <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem;">
@@ -496,9 +491,10 @@ footer{
         <div class="product-info">
           <h3>Behike BHK 52</h3>
           <p class="product-origin">Cuba · Gran Corona · Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 格兰皇冠型 · 浓郁型</p>
           <div class="product-desc">
             古巴雪茄之王，Behike 系列为高希霸最高端产品线。采用极为珍稀的 Medio Tiempo 烟叶（烟株顶部最上两片小叶），仅占每株烟叶总量的极小比例。浓郁的可可、咖啡豆与皮革香气层层递进，尾段展现出独特的甘草甜味与黑胡椒辛香。口感丝滑醇厚，被誉为雪茄界的劳斯莱斯。
-            <div class="en">The king of Cuban cigars, Behike is Cohiba's pinnacle line. Featuring the ultra-rare Medio Tiempo leaves from the very top of the tobacco plant. Rich layers of cocoa, coffee bean, and leather unfold, finishing with unique licorice sweetness and black pepper spice. Silky and full-bodied — the Rolls-Royce of cigars.</div>
+            <div class="en" style="display:none;">The king of Cuban cigars, Behike is Cohiba's pinnacle line. Featuring the ultra-rare Medio Tiempo leaves from the very top of the tobacco plant. Rich layers of cocoa, coffee bean, and leather unfold, finishing with unique licorice sweetness and black pepper spice. Silky and full-bodied — the Rolls-Royce of cigars.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">7⅝′ × 52</span></li>
@@ -512,7 +508,7 @@ footer{
             <span class="unit">¥680</span>
             <span class="box">整盒 <span>¥12,800</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -524,9 +520,10 @@ footer{
         <div class="product-info">
           <h3>Série D No.4</h3>
           <p class="product-origin">Cuba · Robusto · Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 罗布斯图型 · 浓郁型</p>
           <div class="product-desc">
             帕特加斯最经典、最受欢迎的尺寸，全球销量最高的古巴雪茄之一。以浓郁的香料和木质风味著称，初段即展现强烈的黑胡椒与肉桂气息，中段转为雪松木和烤咖啡豆的醇厚风味。口感饱满浓郁，是老饕们心目中性价比极高的日常口粮茄。
-            <div class="en">The most iconic and popular size from Partagás, one of the world's best-selling Cuban cigars. Renowned for its bold spice and woody character — opens with intense black pepper and cinnamon, evolves into cedar and roasted coffee. Full-bodied and intensely satisfying — exceptional value for connoisseurs.</div>
+            <div class="en" style="display:none;">The most iconic and popular size from Partagás, one of the world's best-selling Cuban cigars. Renowned for its bold spice and woody character — opens with intense black pepper and cinnamon, evolves into cedar and roasted coffee. Full-bodied and intensely satisfying — exceptional value for connoisseurs.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">4⅞′ × 50</span></li>
@@ -540,7 +537,7 @@ footer{
             <span class="unit">¥220</span>
             <span class="box">整盒 <span>¥2,080</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -552,9 +549,10 @@ footer{
         <div class="product-info">
           <h3>Epicure No.2</h3>
           <p class="product-origin">Cuba · Robusto Extra · Medium Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 大罗布斯图型 · 中等浓度</p>
           <div class="product-desc">
             好友品牌的中坚之作，以温和优雅的风格著称。采用古巴 Vuelta Abajo 产区精选烟叶，口感柔顺细腻。初段是奶油与花香，中段展现蜂蜜甜味与淡淡的雪松木香，尾段以杏仁和香草收尾。非常适合午后品鉴或作为古巴雪茄的入门之选。
-            <div class="en">A cornerstone of the Hoyo lineup, celebrated for its gentle elegance. Selected Vuelta Abajo leaves deliver smooth refinement. Opens with cream and floral notes, mid-palate reveals honey sweetness and subtle cedar, finishing with almond and vanilla. Perfect afternoon cigar and ideal introduction to Cuban cigar culture.</div>
+            <div class="en" style="display:none;">A cornerstone of the Hoyo lineup, celebrated for its gentle elegance. Selected Vuelta Abajo leaves deliver smooth refinement. Opens with cream and floral notes, mid-palate reveals honey sweetness and subtle cedar, finishing with almond and vanilla. Perfect afternoon cigar and ideal introduction to Cuban cigar culture.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">5′ × 50</span></li>
@@ -568,7 +566,7 @@ footer{
             <span class="unit">¥180</span>
             <span class="box">整盒 <span>¥1,680</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -580,9 +578,10 @@ footer{
         <div class="product-info">
           <h3>Churchill</h3>
           <p class="product-origin">Cuba · Churchill · Medium Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 丘吉尔型 · 中等浓度</p>
           <div class="product-desc">
             以英国首相丘吉尔命名，罗密欧与朱丽叶品牌最具传奇色彩的型号。丘吉尔本人每日必抽此款，使其成为雪茄史上最著名的型号之一。口感温和平衡，初段是烤坚果与干草的清香，中段展现皮革与白胡椒的层次，尾段回归柔和的雪松木与奶油味。一支约可享受70分钟的悠然时光。
-            <div class="en">Named after Winston Churchill himself, the most legendary vitola in the Romeo y Julieta portfolio. Churchill smoked this daily, making it one of the most famous cigars in history. Mild and balanced — roasted nuts and hay opening, leather and white pepper mid-palate, finishing with gentle cedar and cream. A leisurely 70-minute experience.</div>
+            <div class="en" style="display:none;">Named after Winston Churchill himself, the most legendary vitola in the Romeo y Julieta portfolio. Churchill smoked this daily, making it one of the most famous cigars in history. Mild and balanced — roasted nuts and hay opening, leather and white pepper mid-palate, finishing with gentle cedar and cream. A leisurely 70-minute experience.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">7′ × 47</span></li>
@@ -596,7 +595,7 @@ footer{
             <span class="unit">¥280</span>
             <span class="box">整盒 <span>¥2,680</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -608,9 +607,10 @@ footer{
         <div class="product-info">
           <h3>No.2 Torpedo</h3>
           <p class="product-origin">Cuba · Torpedo · Medium-Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 鱼雷型 · 中浓型</p>
           <div class="product-desc">
             蒙特克里斯托是古巴雪茄中销量最大的品牌之一，No.2 Torpedo 更是其旗舰型号。鱼雷造型赋予抽吸者对燃烧速度的控制权，口感从温和逐渐过渡到浓郁。初段是香草与雪松，中段转为黑巧克力与咖啡豆，尾段展现深沉的皮革与辛辣。平衡感极佳，是品味古巴雪茄精髓的不二之选。
-            <div class="en">Montecristo is one of Cuba's best-selling brands, and No.2 Torpedo is its flagship. The torpedo shape allows control over burn speed and flavor intensity. Opens with vanilla and cedar, transitions to dark chocolate and coffee, finishing with deep leather and spice. Superbly balanced — the quintessential Cuban experience.</div>
+            <div class="en" style="display:none;">Montecristo is one of Cuba's best-selling brands, and No.2 Torpedo is its flagship. The torpedo shape allows control over burn speed and flavor intensity. Opens with vanilla and cedar, transitions to dark chocolate and coffee, finishing with deep leather and spice. Superbly balanced — the quintessential Cuban experience.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">6⅛′ × 52</span></li>
@@ -624,7 +624,7 @@ footer{
             <span class="unit">¥350</span>
             <span class="box">整盒 <span>¥3,280</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -636,9 +636,10 @@ footer{
         <div class="product-info">
           <h3>Magnum 50</h3>
           <p class="product-origin">Cuba · Double Robusto · Medium Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 双罗布斯图型 · 中等浓度</p>
           <div class="product-desc">
             乌普曼品牌创立于1844年，是古巴历史最悠久的雪茄品牌之一。Magnum 50 采用大尺寸 Robusto 造型，口感温和顺滑，以奶油质感和木质香气见长。初段是淡淡的奶油与面包香，中段融入烤杏仁和蜂蜜的甜味，尾段以柔和的雪松木香收尾。是追求优雅品鉴体验的雪茄客的理想选择。
-            <div class="en">Founded in 1844, H. Upmann is one of Cuba's oldest cigar brands. Magnum 50 features a large Robusto format with smooth, creamy character and woody aromatics. Opens with subtle cream and toasted bread, mid-palate reveals roasted almond and honey sweetness, finishing with gentle cedar. An ideal choice for the elegant connoisseur.</div>
+            <div class="en" style="display:none;">Founded in 1844, H. Upmann is one of Cuba's oldest cigar brands. Magnum 50 features a large Robusto format with smooth, creamy character and woody aromatics. Opens with subtle cream and toasted bread, mid-palate reveals roasted almond and honey sweetness, finishing with gentle cedar. An ideal choice for the elegant connoisseur.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">5⅞′ × 50</span></li>
@@ -652,7 +653,7 @@ footer{
             <span class="unit">¥260</span>
             <span class="box">整盒 <span>¥2,480</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -664,9 +665,10 @@ footer{
         <div class="product-info">
           <h3>Fundadores</h3>
           <p class="product-origin">Cuba · Laguito No.1 · Medium-Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 拉吉托1号型 · 中浓型</p>
           <div class="product-desc">
             特立尼达品牌长期以来专供古巴外交使用，直到1998年才对公众开放。Fundadores 作为品牌的创始型号，以细腻而复杂的口感闻名。初段是花香与淡淡的木材清香，中段展现可可豆与肉桂的温暖层次，尾段以皮革与坚果香优雅收尾。产量稀少，是收藏家追捧的珍品。
-            <div class="en">Trinidad was exclusively reserved for Cuban diplomacy until 1998. Fundadores, the founding vitola, is celebrated for its refined complexity. Opens with floral and subtle wood notes, mid-palate reveals cocoa and cinnamon warmth, finishing with elegant leather and nuttiness. Rare production makes it a collector's treasure.</div>
+            <div class="en" style="display:none;">Trinidad was exclusively reserved for Cuban diplomacy until 1998. Fundadores, the founding vitola, is celebrated for its refined complexity. Opens with floral and subtle wood notes, mid-palate reveals cocoa and cinnamon warmth, finishing with elegant leather and nuttiness. Rare production makes it a collector's treasure.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">7½′ × 40</span></li>
@@ -680,7 +682,7 @@ footer{
             <span class="unit">¥420</span>
             <span class="box">整盒 <span>¥3,980</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -692,9 +694,10 @@ footer{
         <div class="product-info">
           <h3>Double Corona</h3>
           <p class="product-origin">Cuba · Double Corona · Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 双皇冠型 · 浓郁型</p>
           <div class="product-desc">
             潘趣品牌创立于1840年，以英国经典木偶剧命名。Double Corona 是品牌最经典的尺寸，以浓郁有力的口感著称。初段即展现强烈的黑胡椒与木质香料气息，中段转为烤咖啡豆与皮革的深沉风味，尾段以焦糖甜味与黑巧克力收尾。适合经验丰富的雪茄爱好者。
-            <div class="en">Founded in 1840, named after the classic British puppet show. Double Corona is Punch's most iconic size, known for bold and powerful character. Opens with intense black pepper and woody spice, transitions to roasted coffee and leather, finishing with caramel sweetness and dark chocolate. For the experienced cigar enthusiast.</div>
+            <div class="en" style="display:none;">Founded in 1840, named after the classic British puppet show. Double Corona is Punch's most iconic size, known for bold and powerful character. Opens with intense black pepper and woody spice, transitions to roasted coffee and leather, finishing with caramel sweetness and dark chocolate. For the experienced cigar enthusiast.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">7⅝′ × 49</span></li>
@@ -708,7 +711,7 @@ footer{
             <span class="unit">¥200</span>
             <span class="box">整盒 <span>¥1,880</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -720,9 +723,10 @@ footer{
         <div class="product-info">
           <h3>Imperial</h3>
           <p class="product-origin">Cuba · Corona Gorda · Medium Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 大皇冠型 · 中等浓度</p>
           <div class="product-desc">
             多尔塞品牌创立于1970年代，专为法国市场打造，以巴黎著名河岸命名。Imperial 是品牌旗舰款，口感轻盈优雅，带有法式精致风情。初段是花香与柑橘的清新，中段展现奶油香草与白橡木的温和层次，尾段以杏仁和淡淡的蜂蜜甜味收尾。如同塞纳河畔的一场悠闲午后。
-            <div class="en">Created in the 1970s exclusively for the French market, named after Paris's famed riverbank. Imperial is the flagship — light, elegant, with French sophistication. Opens with floral and citrus freshness, mid-palate reveals creamy vanilla and white oak, finishing with almond and subtle honey. Like a leisurely afternoon by the Seine.</div>
+            <div class="en" style="display:none;">Created in the 1970s exclusively for the French market, named after Paris's famed riverbank. Imperial is the flagship — light, elegant, with French sophistication. Opens with floral and citrus freshness, mid-palate reveals creamy vanilla and white oak, finishing with almond and subtle honey. Like a leisurely afternoon by the Seine.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">5⅞′ × 46</span></li>
@@ -736,7 +740,7 @@ footer{
             <span class="unit">¥230</span>
             <span class="box">整盒 <span>¥2,180</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -748,9 +752,10 @@ footer{
         <div class="product-info">
           <h3>Série Belicosos</h3>
           <p class="product-origin">Cuba · Belicoso · Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 贝利科索型 · 浓郁型</p>
           <div class="product-desc">
             雷蒙·阿龙创立于1837年，是最早使用彩色品牌标签的雪茄品牌之一。Série Belicosos 以浓郁复杂的口感著称，初段即展现丰富的香料气息——肉桂、丁香与白胡椒交织，中段转为深色浆果与黑巧克力，尾段以雪松木与皮革香收尾。层次丰富，变化多端，值得细细品味。
-            <div class="en">Founded in 1837, one of the first cigar brands to use colorful band labels. Série Belicosos is known for rich complexity — an immediate symphony of cinnamon, clove, and white pepper, mid-palate transitions to dark berry and dark chocolate, finishing with cedar and leather. Layered and ever-changing — a cigar to savor slowly.</div>
+            <div class="en" style="display:none;">Founded in 1837, one of the first cigar brands to use colorful band labels. Série Belicosos is known for rich complexity — an immediate symphony of cinnamon, clove, and white pepper, mid-palate transitions to dark berry and dark chocolate, finishing with cedar and leather. Layered and ever-changing — a cigar to savor slowly.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">5½′ × 52</span></li>
@@ -764,7 +769,7 @@ footer{
             <span class="unit">¥250</span>
             <span class="box">整盒 <span>¥2,380</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -776,9 +781,10 @@ footer{
         <div class="product-info">
           <h3>Divinos</h3>
           <p class="product-origin">Cuba · Perla · Medium Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 珍珠型 · 中等浓度</p>
           <div class="product-desc">
             库阿巴是古巴雪茄品牌中唯一的完美双尖头造型（Totemos），造型独特优美。Divinos 采用小尺寸完美造型，初段是淡淡的咖啡与木材香，中段展现奶油质感与杏仁甜味，尾段以花香与蜂蜜优雅收尾。独特的外形不仅美观，更赋予雪茄均匀稳定的燃烧特性。
-            <div class="en">Cuaba is the only Cuban brand exclusively producing perfect double-torpedo figurados. Divinos features a petite perfecto shape — opens with subtle coffee and wood notes, mid-palate reveals creamy texture and almond sweetness, finishing with floral and honey elegance. The unique shape ensures even, consistent burn throughout.</div>
+            <div class="en" style="display:none;">Cuaba is the only Cuban brand exclusively producing perfect double-torpedo figurados. Divinos features a petite perfecto shape — opens with subtle coffee and wood notes, mid-palate reveals creamy texture and almond sweetness, finishing with floral and honey elegance. The unique shape ensures even, consistent burn throughout.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">4⅞′ × 43</span></li>
@@ -792,7 +798,7 @@ footer{
             <span class="unit">¥150</span>
             <span class="box">整盒 <span>¥1,420</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -804,9 +810,10 @@ footer{
         <div class="product-info">
           <h3>Belicosos Finos</h3>
           <p class="product-origin">Cuba · Belicoso · Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 贝利科索型 · 浓郁型</p>
           <div class="product-desc">
             以委内瑞拉民族英雄西蒙·玻利瓦尔命名，是古巴雪茄中最浓烈强劲的品牌之一。Belicosos Finos 从第一口就展现出强大的冲击力——浓烈的黑胡椒、皮革与泥土气息扑面而来，中段融入深色巧克力和浓缩咖啡的苦甜，尾段回归香料与木材的沉稳。适合追求极致浓郁口感的资深品鉴者。
-            <div class="en">Named after Venezuelan liberator Simón Bolívar, one of the most powerful and robust Cuban brands. Belicosos Finos delivers immediate impact — intense black pepper, leather, and earth, mid-palate integrates dark chocolate and espresso, finishing with spice and wood gravitas. For connoisseurs who seek maximum intensity.</div>
+            <div class="en" style="display:none;">Named after Venezuelan liberator Simón Bolívar, one of the most powerful and robust Cuban brands. Belicosos Finos delivers immediate impact — intense black pepper, leather, and earth, mid-palate integrates dark chocolate and espresso, finishing with spice and wood gravitas. For connoisseurs who seek maximum intensity.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">5½′ × 52</span></li>
@@ -820,7 +827,7 @@ footer{
             <span class="unit">¥210</span>
             <span class="box">整盒 <span>¥1,980</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -832,9 +839,10 @@ footer{
         <div class="product-info">
           <h3>Grand Cru No.3</h3>
           <p class="product-origin">Dominican Rep. · Robusto · Medium Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">多米尼加 · 罗布斯图型 · 中等浓度</p>
           <div class="product-desc">
             大卫杜夫虽源自古巴，但如今在多米尼加共和国生产，是雪茄界最具辨识度的奢侈品牌之一。Grand Cru No.3 以温和优雅的风格闻名，初段是奶油与烤面包的清香，中段展现橡木与坚果的温暖层次，尾段以香草与淡淡的花蜜甜味收尾。口感细腻精致，是品鉴高雅雪茄文化的完美入口。
-            <div class="en">Though Cuban-born, Davidoff now crafts in the Dominican Republic and is one of the most recognizable luxury cigar brands. Grand Cru No.3 is renowned for mild elegance — cream and toasted bread opening, mid-palate reveals oak and nutty warmth, finishing with vanilla and subtle floral honey. Refined and sophisticated.</div>
+            <div class="en" style="display:none;">Though Cuban-born, Davidoff now crafts in the Dominican Republic and is one of the most recognizable luxury cigar brands. Grand Cru No.3 is renowned for mild elegance — cream and toasted bread opening, mid-palate reveals oak and nutty warmth, finishing with vanilla and subtle floral honey. Refined and sophisticated.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">5′ × 50</span></li>
@@ -848,7 +856,7 @@ footer{
             <span class="unit">¥320</span>
             <span class="box">整盒 <span>¥3,080</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -860,9 +868,10 @@ footer{
         <div class="product-info">
           <h3>Selección No.1</h3>
           <p class="product-origin">Cuba · Corona · Medium-Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 皇冠型 · 中浓型</p>
           <div class="product-desc">
             胡安·洛佩斯是古巴雪茄中的低调瑰宝，产量极少，在市场上难以寻觅。Selección No.1 采用经典的 Corona 尺寸，口感浓郁而富有变化。初段是木质香料与淡淡的皮革香，中段展现黑可可与浓缩咖啡的深沉，尾段以焦糖甜味和雪松木优雅收尾。真正懂茄之人的私藏之选。
-            <div class="en">Juan López is a hidden gem among Cuban cigars — limited production makes it a rare find. Selección No.1 in classic Corona format delivers rich, evolving character. Woody spice and subtle leather opening, mid-palate reveals dark cocoa and espresso depth, finishing with caramel sweetness and cedar elegance. A connoisseur's secret stash.</div>
+            <div class="en" style="display:none;">Juan López is a hidden gem among Cuban cigars — limited production makes it a rare find. Selección No.1 in classic Corona format delivers rich, evolving character. Woody spice and subtle leather opening, mid-palate reveals dark cocoa and espresso depth, finishing with caramel sweetness and cedar elegance. A connoisseur's secret stash.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">5⅞′ × 42</span></li>
@@ -876,7 +885,7 @@ footer{
             <span class="unit">¥190</span>
             <span class="box">整盒 <span>¥1,800</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -888,9 +897,10 @@ footer{
         <div class="product-info">
           <h3>La Fuerza</h3>
           <p class="product-origin">Cuba · Robusto Extra · Medium-Full Body</p>
+          <p class="product-origin" style="margin-top:-0.3rem;">古巴 · 大罗布斯图型 · 中浓型</p>
           <div class="product-desc">
             圣克里斯托以古巴首都哈瓦那的旧称命名，创立于1999年，是相对年轻的古巴品牌。La Fuerza（西班牙语“力量”之意）如其名，口感饱满有力。初段展现浓郁的香料与木质气息，中段融入黑巧克力与咖啡豆的醇厚，尾段以皮革与淡淡的水果甜味收尾。兼具年轻品牌的活力与古巴雪茄的经典风范。
-            <div class="en">Named after Havana's original name, San Cristóbal was founded in 1999 — a relatively young Cuban brand. La Fuerza ("The Force") lives up to its name with bold, powerful character. Intense spice and wood opening, mid-palate integrates dark chocolate and coffee, finishing with leather and subtle fruit sweetness. Youthful energy meets classic Cuban tradition.</div>
+            <div class="en" style="display:none;">Named after Havana's original name, San Cristóbal was founded in 1999 — a relatively young Cuban brand. La Fuerza ("The Force") lives up to its name with bold, powerful character. Intense spice and wood opening, mid-palate integrates dark chocolate and coffee, finishing with leather and subtle fruit sweetness. Youthful energy meets classic Cuban tradition.</div>
           </div>
           <ul class="detail-list">
             <li><span class="label">规格</span><span class="value">5⅛′ × 54</span></li>
@@ -904,7 +914,7 @@ footer{
             <span class="unit">¥200</span>
             <span class="box">整盒 <span>¥1,880</span> / 10支</span>
           </div>
-          <a href="#" class="learn-more">Learn More →</a>
+          <a href="#" class="learn-more">了解更多 →</a>
         </div>
       </div>
 
@@ -915,34 +925,34 @@ footer{
 <!-- ===== CRAFTSMANSHIP ===== -->
 <section class="craftsmanship" id="craftsmanship">
   <div class="container">
-    <h2 class="section-title fade-up">Craftsmanship</h2>
+    <h2 class="section-title fade-up">匠心工艺</h2>
     <div class="divider fade-up"></div>
-    <p class="section-subtitle fade-up">Every Casa Real cigar is the result of an unhurried, meticulous process passed down through generations.</p>
+    <p class="section-subtitle fade-up">每一支 Casa Real 雪茄都源自代代相传的从容与精密——这是跨越百年的匠心。</p>
 
     <div class="craft-step fade-up">
       <div class="craft-img">🌱</div>
       <div class="craft-text">
-        <span class="step-num">Step 01 — Cultivation</span>
-        <h3>Seed to Harvest</h3>
-        <p>Our tobacco begins as carefully selected seeds planted in the richest soils of Cuba, Nicaragua, and the Dominican Republic. Each plant is tended by hand — from the first delicate seedling to the moment the priming leaves are harvested at peak maturity. Only the finest leaves earn the Casa Real name.</p>
+        <span class="step-num">第一步 — 种植</span>
+        <h3>从种子到收获</h3>
+        <p>我们的烟叶始于精心挑选的种子，种植于古巴、尼加拉瓜和多米尼加最肥沃的土壤中。每一株烟叶都由人工照料——从第一片娇嫩的幼苗，到烟叶在最佳成熟期被采摘。只有最顶级的烟叶才配得上 Casa Real 的名字。</p>
       </div>
     </div>
 
     <div class="craft-step fade-up">
       <div class="craft-img">🍃</div>
       <div class="craft-text">
-        <span class="step-num">Step 02 — Fermentation</span>
-        <h3>The Art of Fermentation</h3>
-        <p>Harvested leaves enter a carefully controlled fermentation process lasting weeks to months. Natural heat and humidity break down harsh compounds while concentrating flavors. Our master fermenters turn and inspect each pilón daily, ensuring the leaves develop their full aromatic potential.</p>
+        <span class="step-num">第二步 — 发酵</span>
+        <h3>发酵的艺术</h3>
+        <p>采摘后的烟叶进入精心控制的发酵过程，持续数周至数月。自然的温度和湿度分解辛辣物质，同时浓缩风味。我们的发酵大师每天翻动和检查每一堆烟叶，确保它们充分释放芳香潜力。</p>
       </div>
     </div>
 
     <div class="craft-step fade-up">
       <div class="craft-img">✋</div>
       <div class="craft-text">
-        <span class="step-num">Step 03 — Rolling & Aging</span>
-        <h3>Hand-Rolled Perfection</h3>
-        <p>Expert torcedores assemble each cigar using the traditional entubar method — bunching each filler leaf individually for a flawless draw. After rolling, cigars rest in Spanish cedar aging rooms where the tobaccos marry into a harmonious whole, emerging ready to deliver an extraordinary smoking experience.</p>
+        <span class="step-num">第三步 — 卷制与陈化</span>
+        <h3>手工卷制的极致</h3>
+        <p>资深卷烟师采用传统的 entubar 卷制法——将每片茄芯叶单独卷制，确保完美抽吸感。卷制完成后，雪茄在西班牙雪松木陈化室中静置，烟叶融合为一个和谐的整体，最终成就非凡的品鉴体验。</p>
       </div>
     </div>
   </div>
@@ -951,44 +961,44 @@ footer{
 <!-- ===== TASTING NOTES ===== -->
 <section class="tasting" id="tasting">
   <div class="container">
-    <h2 class="section-title fade-up">Tasting Notes</h2>
+    <h2 class="section-title fade-up">品鉴指南</h2>
     <div class="divider fade-up"></div>
-    <p class="section-subtitle fade-up">A guide to the flavor profiles and aromatic characteristics found in our collection.</p>
+    <p class="section-subtitle fade-up">了解我们产品系列中的风味特征与香气特点。</p>
     <div class="tasting-grid">
       <div class="tasting-card fade-up">
         <span class="tasting-icon">🪵</span>
-        <h4>Cedar</h4>
-        <p>Aromatic cedarwood provides a warm, dry foundation present across our entire range.</p>
+        <h4>雪松</h4>
+        <p>芳香的雪松木提供温暖干燥的基础调性，贯穿我们的全部产品线。</p>
         <div class="strength-bar"><div class="strength-fill" style="width:85%"></div></div>
       </div>
       <div class="tasting-card fade-up">
         <span class="tasting-icon">🍫</span>
-        <h4>Chocolate</h4>
-        <p>Rich cocoa and dark chocolate notes, especially pronounced in our Maduro and Premium lines.</p>
+        <h4>巧克力</h4>
+        <p>浓郁的可可和黑巧克力风味，在 Maduro 和 Premium 系列中尤为突出。</p>
         <div class="strength-bar"><div class="strength-fill" style="width:75%"></div></div>
       </div>
       <div class="tasting-card fade-up">
         <span class="tasting-icon">🌶️</span>
-        <h4>Pepper</h4>
-        <p>White and black pepper spice that adds complexity and a pleasant warming sensation.</p>
+        <h4>胡椒</h4>
+        <p>白胡椒与黑胡椒的辛香，增添复杂度与令人愉悦的温暖感。</p>
         <div class="strength-bar"><div class="strength-fill" style="width:65%"></div></div>
       </div>
       <div class="tasting-card fade-up">
         <span class="tasting-icon">🌰</span>
-        <h4>Nutty</h4>
-        <p>Almond, walnut, and hazelnut undertones that bring a comforting sweetness to the finish.</p>
+        <h4>坚果</h4>
+        <p>杏仁、核桃和榛子的底调，为尾段带来令人舒适的甜感。</p>
         <div class="strength-bar"><div class="strength-fill" style="width:60%"></div></div>
       </div>
       <div class="tasting-card fade-up">
         <span class="tasting-icon">🌾</span>
-        <h4>Leather</h4>
-        <p>Fine leather notes adding depth and an old-world character reminiscent of a gentleman's study.</p>
+        <h4>皮革</h4>
+        <p>精良的皮革气息增添深度与古典气质，令人联想到绅士书房。</p>
         <div class="strength-bar"><div class="strength-fill" style="width:50%"></div></div>
       </div>
       <div class="tasting-card fade-up">
         <span class="tasting-icon">🍯</span>
-        <h4>Honey</h4>
-        <p>A natural, delicate sweetness that lingers on the palate — especially in our milder blends.</p>
+        <h4>蜂蜜</h4>
+        <p>自然而细腻的甜味，在口腔中萦绕不去——在我们的温和系列中尤为明显。</p>
         <div class="strength-bar"><div class="strength-fill" style="width:40%"></div></div>
       </div>
     </div>
@@ -998,38 +1008,38 @@ footer{
 <!-- ===== CONTACT & LOUNGE ===== -->
 <section class="contact" id="contact">
   <div class="container">
-    <h2 class="section-title fade-up">Visit Our Lounge</h2>
+    <h2 class="section-title fade-up">探访雪茄会所</h2>
     <div class="divider fade-up"></div>
-    <p class="section-subtitle fade-up">Experience Casa Real in person at our flagship lounge in the heart of Paris.</p>
+    <p class="section-subtitle fade-up">欢迎亲临我们位于巴黎市中心的旗舰店，感受 Casa Real 的魅力。</p>
     <div class="contact-grid">
       <div class="contact-info fade-up">
         <div class="contact-item">
-          <h4>Address</h4>
+          <h4>地址</h4>
           <p>42 Rue du Faubourg Saint-Honoré<br>75008 Paris, France</p>
         </div>
         <div class="contact-item">
-          <h4>Telephone</h4>
+          <h4>电话</h4>
           <p><a href="tel:+33142650087">+33 1 42 65 00 87</a></p>
         </div>
         <div class="contact-item">
-          <h4>Hours</h4>
+          <h4>营业时间</h4>
           <p>Monday — Saturday: 14:00 – 23:00<br>Sunday: 15:00 – 21:00</p>
         </div>
         <div class="contact-item">
-          <h4>Email</h4>
+          <h4>电子邮箱</h4>
           <p><a href="mailto:concierge@casareal.com">concierge@casareal.com</a></p>
         </div>
       </div>
       <form class="contact-form fade-up" onsubmit="event.preventDefault()">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Your full name" required>
-        <label for="email">Email</label>
+        <label for="name">姓名</label>
+        <input type="text" id="name" placeholder="您的姓名" required>
+        <label for="email">邮箱</label>
         <input type="email" id="email" placeholder="your@email.com" required>
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" placeholder="Private tasting, consultation, etc.">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="How may we assist you?" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <label for="subject">主题</label>
+        <input type="text" id="subject" placeholder="私人品鉴、咨询等">
+        <label for="message">留言</label>
+        <textarea id="message" rows="5" placeholder="请问有什么可以帮您？" required></textarea>
+        <button type="submit" class="btn">发送留言</button>
       </form>
     </div>
   </div>
@@ -1041,11 +1051,11 @@ footer{
     <div class="footer-inner">
       <div class="footer-brand">CASA REAL</div>
       <div class="footer-links">
-        <a href="#heritage">Heritage</a>
-        <a href="#collection">Collection</a>
-        <a href="#craftsmanship">Craftsmanship</a>
-        <a href="#tasting">Tasting</a>
-        <a href="#contact">Lounge</a>
+        <a href="#heritage">品牌传承</a>
+        <a href="#collection">全部产品</a>
+        <a href="#craftsmanship">匠心工艺</a>
+        <a href="#tasting">品鉴指南</a>
+        <a href="#contact">雪茄会所</a>
       </div>
       <div class="footer-social">
         <a href="#" aria-label="Instagram">IG</a>
@@ -1055,7 +1065,7 @@ footer{
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2025 Casa Real Cigars. All rights reserved. &nbsp;|&nbsp; Smoke responsibly. Not for sale to minors.
+      &copy; 2025 Casa Real Cigars. 保留所有权利。&nbsp;|&nbsp; 请负责任地品鉴。未成年人禁止购买。
     </div>
   </div>
 </footer>
