@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CASA REAL — Premium Cigars Since 1887</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & VARIABLES ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0805;--bg2:#1a0f0a;
+  --gold:#c9a96e;--gold-light:#dfc49a;--gold-dark:#a08040;
+  --ivory:#fff5e6;--muted:#c4a882;--dim:#8a7560;
+  --card:rgba(20,12,8,.85);--border:rgba(201,169,110,.25);
+  --font-heading:'Playfair Display',Georgia,serif;
+  --font-body:'Montserrat','Helvetica Neue',Arial,sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:var(--font-body);font-weight:400;color:var(--ivory);
+  background:var(--bg);line-height:1.7;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--gold);text-decoration:none;transition:color .3s}
+a:hover{color:var(--gold-light)}
+ul{list-style:none}
+
+/* ===== UTILITY ===== */
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+section{padding:6rem 0}
+.section-title{
+  font-family:var(--font-heading);font-size:clamp(2rem,4vw,3rem);
+  color:var(--gold);text-align:center;margin-bottom:1rem;
+}
+.section-subtitle{
+  text-align:center;color:var(--muted);font-size:.95rem;
+  max-width:600px;margin:0 auto 3rem;font-weight:300;letter-spacing:.03em;
+}
+.divider{
+  width:60px;height:2px;background:var(--gold);margin:1.2rem auto;
+  border-radius:2px;
+}
+.btn{
+  display:inline-block;padding:.85rem 2.2rem;
+  border:1px solid var(--gold);color:var(--gold);
+  font-family:var(--font-body);font-size:.85rem;letter-spacing:.15em;
+  text-transform:uppercase;cursor:pointer;
+  transition:all .35s ease;background:transparent;
+}
+.btn:hover,.btn:focus{
+  background:var(--gold);color:var(--bg);
+}
+
+/* ===== FADE-UP ANIMATION ===== */
+.fade-up{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ===== NAVIGATION ===== */
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  padding:1.2rem 0;transition:all .4s ease;
+}
+nav.scrolled{
+  background:rgba(13,8,5,.95);backdrop-filter:blur(12px);
+  padding:.8rem 0;box-shadow:0 2px 20px rgba(0,0,0,.4);
+}
+nav .container{display:flex;align-items:center;justify-content:space-between}
+.nav-brand{
+  font-family:var(--font-heading);font-size:1.4rem;
+  color:var(--gold);letter-spacing:.12em;font-weight:700;
+}
+.nav-links{display:flex;gap:2.2rem}
+.nav-links a{
+  color:var(--ivory);font-size:.8rem;letter-spacing:.12em;
+  text-transform:uppercase;font-weight:500;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;width:0;
+  height:1px;background:var(--gold);transition:width .3s ease;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+.hamburger{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+  background:none;border:none;padding:4px;
+}
+.hamburger span{
+  width:24px;height:2px;background:var(--gold);
+  transition:all .3s ease;
+}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-links{
+    position:fixed;top:0;right:-100%;width:280px;height:100vh;
+    background:rgba(13,8,5,.98);backdrop-filter:blur(16px);
+    flex-direction:column;padding:5rem 2rem 2rem;gap:1.8rem;
+    transition:right .4s ease;box-shadow:-4px 0 30px rgba(0,0,0,.5);
+  }
+  .nav-links.open{right:0}
+  .nav-links a{font-size:.9rem}
+}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;position:relative;overflow:hidden;
+  background:linear-gradient(170deg,#0d0805 0%,#1a0f0a 40%,#0d0805 100%);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 60%,rgba(201,169,110,.06) 0%,transparent 70%);
+}
+.hero-content{position:relative;z-index:1;padding:2rem}
+.hero-est{
+  font-family:var(--font-body);font-size:.85rem;letter-spacing:.35em;
+  color:var(--muted);text-transform:uppercase;margin-bottom:1.5rem;
+}
+.hero-title{
+  font-family:var(--font-heading);font-size:clamp(3.5rem,10vw,8rem);
+  color:var(--gold);line-height:1;letter-spacing:.08em;
+  text-shadow:0 4px 30px rgba(201,169,110,.15);
+  margin-bottom:1.5rem;
+}
+.hero-tagline{
+  font-family:var(--font-body);font-weight:300;font-size:clamp(1rem,2.5vw,1.25rem);
+  color:var(--muted);max-width:520px;margin:0 auto 2.5rem;letter-spacing:.05em;
+}
+.hero .btn{margin-top:.5rem}
+
+/* ===== HERITAGE ===== */
+.heritage{background:var(--bg)}
+.heritage-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;
+}
+.heritage-card{
+  background:var(--card);border:1px solid var(--border);
+  padding:2.5rem 2rem;text-align:center;
+  transition:transform .4s ease,box-shadow .4s ease;
+}
+.heritage-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 40px rgba(201,169,110,.08);
+}
+.heritage-icon{
+  font-size:2.8rem;margin-bottom:1.5rem;display:block;
+}
+.heritage-card h3{
+  font-family:var(--font-heading);font-size:1.35rem;
+  color:var(--gold);margin-bottom:.8rem;
+}
+.heritage-card p{
+  color:var(--muted);font-size:.9rem;line-height:1.8;
+}
+
+/* ===== COLLECTION ===== */
+.collection{background:var(--bg2)}
+.category-filter{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem;
+  margin-top:3rem;margin-bottom:2.5rem;
+}
+.cat-btn{
+  padding:.55rem 1.3rem;font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;cursor:pointer;border:1px solid var(--border);
+  background:transparent;color:var(--muted);
+  font-family:var(--font-body);transition:all .3s ease;
+}
+.cat-btn:hover{border-color:var(--gold);color:var(--gold)}
+.cat-btn.active{
+  background:var(--gold);color:var(--bg);border-color:var(--gold);
+  font-weight:600;
+}
+.products-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:2rem;
+}
+@media(max-width:400px){
+  .products-grid{grid-template-columns:1fr}
+}
+.product-card{
+  background:var(--card);border:1px solid var(--border);
+  overflow:hidden;transition:transform .4s ease,box-shadow .4s ease;
+}
+.product-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 50px rgba(201,169,110,.1);
+}
+.product-card.hidden{display:none}
+.product-img-wrap{
+  position:relative;height:240px;overflow:hidden;
+  background:#0a0604;
+}
+.product-img-wrap img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s ease;
+}
+.product-card:hover .product-img-wrap img{transform:scale(1.05)}
+.category-badge{
+  position:absolute;top:12px;left:12px;
+  padding:.3rem .8rem;font-size:.7rem;letter-spacing:.08em;
+  text-transform:uppercase;font-weight:600;
+  background:rgba(13,8,5,.85);border:1px solid var(--gold);
+  color:var(--gold);backdrop-filter:blur(6px);
+}
+.price-tag{
+  position:absolute;top:12px;right:12px;
+  padding:.3rem .75rem;font-size:.75rem;font-weight:600;
+  background:var(--gold);color:var(--bg);
+}
+.product-info{padding:1.8rem 1.5rem 1.5rem}
+.product-info h3{
+  font-family:var(--font-heading);font-size:1.3rem;
+  color:var(--gold);margin-bottom:.3rem;
+}
+.product-origin{
+  font-size:.8rem;color:var(--dim);letter-spacing:.04em;
+  margin-bottom:1rem;font-style:italic;
+}
+.product-desc{
+  font-size:.88rem;color:var(--muted);line-height:1.85;
+  margin-bottom:1.2rem;
+}
+.product-desc .en{
+  margin-top:.6rem;font-size:.82rem;color:var(--dim);
+  font-style:italic;border-top:1px solid var(--border);
+  padding-top:.6rem;
+}
+.detail-list{
+  margin-bottom:1.2rem;font-size:.8rem;
+}
+.detail-list li{
+  display:flex;justify-content:space-between;
+  padding:.45rem 0;border-bottom:1px solid rgba(201,169,110,.1);
+}
+.detail-list li:last-child{border-bottom:none}
+.detail-list .label{color:var(--dim);min-width:70px}
+.detail-list .value{color:var(--muted);text-align:right;flex:1}
+.product-price{
+  display:flex;align-items:baseline;gap:1.2rem;
+  margin-bottom:1rem;flex-wrap:wrap;
+}
+.product-price .unit{
+  font-family:var(--font-heading);font-size:1.4rem;
+  color:var(--gold);font-weight:700;
+}
+.product-price .box{
+  font-size:.82rem;color:var(--dim);
+}
+.product-price .box span{color:var(--muted)}
+.learn-more{
+  font-size:.82rem;color:var(--gold);letter-spacing:.06em;
+  display:inline-flex;align-items:center;gap:.4rem;
+  transition:gap .3s ease;
+}
+.learn-more:hover{gap:.7rem;color:var(--gold-light)}
+
+/* ===== CRAFTSMANSHIP ===== */
+.craftsmanship{background:var(--bg)}
+.craft-step{
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;
+  align-items:center;padding:3rem 0;
+}
+.craft-step:nth-child(even) .craft-img{order:-1}
+@media(max-width:768px){
+  .craft-step{grid-template-columns:1fr;gap:1.5rem;padding:2rem 0}
+  .craft-step:nth-child(even) .craft-img{order:0}
+}
+.craft-img{
+  height:300px;
+  background:linear-gradient(135deg,var(--bg2),rgba(201,169,110,.05));
+  border:1px solid var(--border);display:flex;align-items:center;
+  justify-content:center;font-size:4rem;color:rgba(201,169,110,.15);
+}
+.craft-text{}
+.craft-text h3{
+  font-family:var(--font-heading);font-size:1.5rem;
+  color:var(--gold);margin-bottom:.6rem;
+}
+.craft-text .step-num{
+  font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-dark);margin-bottom:.8rem;display:block;
+}
+.craft-text p{
+  color:var(--muted);font-size:.92rem;line-height:1.85;
+}
+
+/* ===== TASTING NOTES ===== */
+.tasting{background:var(--bg2)}
+.tasting-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.5rem;
+}
+.tasting-card{
+  background:var(--card);border:1px solid var(--border);
+  padding:1.8rem 1.3rem;text-align:center;
+  transition:transform .3s ease;
+}
+.tasting-card:hover{transform:translateY(-4px)}
+.tasting-icon{font-size:2.2rem;margin-bottom:1rem;display:block}
+.tasting-card h4{
+  font-family:var(--font-heading);font-size:1.05rem;
+  color:var(--gold);margin-bottom:.5rem;
+}
+.tasting-card p{
+  font-size:.82rem;color:var(--muted);margin-bottom:1rem;line-height:1.6;
+}
+.strength-bar{
+  width:100%;height:4px;background:rgba(201,169,110,.15);
+  border-radius:4px;overflow:hidden;
+}
+.strength-fill{
+  height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold));
+  border-radius:4px;transition:width 1s ease;
+}
+
+/* ===== CONTACT & LOUNGE ===== */
+.contact{background:var(--bg)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;
+}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-info{display:flex;flex-direction:column;gap:2rem}
+.contact-item h4{
+  font-family:var(--font-heading);font-size:1.15rem;
+  color:var(--gold);margin-bottom:.5rem;
+}
+.contact-item p,.contact-item a{
+  font-size:.9rem;color:var(--muted);line-height:1.8;
+}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.contact-form label{
+  font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--dim);margin-bottom:-.3rem;
+}
+.contact-form input,
+.contact-form textarea{
+  background:rgba(26,15,10,.8);border:1px solid var(--border);
+  padding:.9rem 1rem;color:var(--ivory);font-family:var(--font-body);
+  font-size:.9rem;transition:border-color .3s ease;resize:vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;border-color:var(--gold);
+}
+.contact-form .btn{align-self:flex-start;margin-top:.5rem}
+
+/* ===== FOOTER ===== */
+footer{
+  background:rgba(0,0,0,.4);padding:3rem 0 2rem;
+  border-top:1px solid var(--border);
+}
+.footer-inner{
+  display:flex;flex-wrap:wrap;justify-content:space-between;
+  align-items:center;gap:1.5rem;
+}
+.footer-brand{
+  font-family:var(--font-heading);font-size:1.2rem;
+  color:var(--gold);letter-spacing:.1em;
+}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{
+  font-size:.8rem;color:var(--dim);letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.footer-links a:hover{color:var(--gold)}
+.footer-social{display:flex;gap:1rem}
+.footer-social a{
+  width:36px;height:36px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:.85rem;transition:all .3s ease;
+}
+.footer-social a:hover{
+  background:var(--gold);color:var(--bg);border-color:var(--gold);
+}
+.footer-bottom{
+  text-align:center;margin-top:2rem;padding-top:1.5rem;
+  border-top:1px solid rgba(201,169,110,.1);
+  font-size:.78rem;color:var(--dim);letter-spacing:.04em;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="container">
+    <a href="#hero" class="nav-brand">CASA REAL</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#heritage">Heritage</a>
+      <a href="#collection">Collection</a>
+      <a href="#craftsmanship">Craftsmanship</a>
+      <a href="#tasting">Tasting Notes</a>
+      <a href="#contact">Lounge</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-content fade-up">
+    <p class="hero-est">— Est. 1887 —</p>
+    <h1 class="hero-title">CASA REAL</h1>
+    <div class="divider"></div>
+    <p class="hero-tagline">A Legacy of Fine Cigars — Handcrafted with Passion Since the 19th Century</p>
+    <a href="#collection" class="btn">Explore Collection</a>
+  </div>
+</section>
+
+<!-- ===== HERITAGE ===== -->
+<section class="heritage" id="heritage">
+  <div class="container">
+    <h2 class="section-title fade-up">Our Heritage</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-subtitle fade-up">For over a century, Casa Real has embodied the art of premium cigar making — from seed to smoke.</p>
+    <div class="heritage-grid">
+      <div class="heritage-card fade-up">
+        <span class="heritage-icon">🌿</span>
+        <h3>Finest Tobacco</h3>
+        <p>We source exclusively from the world's most celebrated growing regions — Vuelta Abajo in Cuba, Cibao Valley in the Dominican Republic, and Estelí in Nicaragua. Each leaf is hand-selected for its exceptional quality and flavor profile.</p>
+      </div>
+      <div class="heritage-card fade-up">
+        <span class="heritage-icon">🤲</span>
+        <h3>Master Torcedores</h3>
+        <p>Our cigars are crafted by master rollers, each with decades of experience. Every Casa Real cigar is shaped by hand, ensuring the perfect draw, even burn, and impeccable construction that defines luxury.</p>
+      </div>
+      <div class="heritage-card fade-up">
+        <span class="heritage-icon">⏳</span>
+        <h3>Patient Aging</h3>
+        <p>Time is the most crucial ingredient. Our cigars rest in Spanish cedar-lined aging rooms for 12 to 60 months, allowing the tobaccos to marry and develop the refined complexity that connoisseurs treasure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COLLECTION ===== -->
+<section class="collection" id="collection">
+  <div class="container">
+    <h2 class="section-title fade-up">The Collection</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-subtitle fade-up">Six distinctive blends, each telling its own story of origin, craftsmanship, and time.</p>
+
+    <div class="category-filter fade-up">
+      <button class="cat-btn active" data-filter="all">All Collections</button>
+      <button class="cat-btn" data-filter="classic">Classic 经典系列</button>
+      <button class="cat-btn" data-filter="premium">Premium 臻品系列</button>
+      <button class="cat-btn" data-filter="reserve">Reserve 珍酿系列</button>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Product 1: Reserva No.1 -->
+      <div class="product-card fade-up" data-category="classic">
+        <div class="product-img-wrap">
+          <img src="images/reserva-no1.png" alt="Reserva No.1">
+          <span class="category-badge">Classic</span>
+          <span class="price-tag">¥180 / 支</span>
+        </div>
+        <div class="product-info">
+          <h3>Reserva No.1</h3>
+          <p class="product-origin">Cuba · Corona Gorda · Medium Body</p>
+          <div class="product-desc">
+            品牌标志性产品，精选古巴 Vuelta Abajo 产区陈年长填烟叶，搭配尼加拉瓜 Ligero 烟叶增添层次感。初入口是雪松木清香，中段展现细腻皮革与白胡椒辛香，尾段回归柔和坚果甜味。口感均衡优雅，是品鉴 Casa Real 的完美起点。
+            <div class="en">Our signature blend featuring aged Cuban long-fillers from Vuelta Abajo, complemented by Nicaraguan Ligero leaves. Opens with cedar, develops into fine leather and white pepper, finishes with gentle nutty sweetness.</div>
+          </div>
+          <ul class="detail-list">
+            <li><span class="label">规格</span><span class="value">5½" × 42</span></li>
+            <li><span class="label">茄衣</span><span class="value">Cuban Corojo 99</span></li>
+            <li><span class="label">茄芯</span><span class="value">Cuba + Nicaragua</span></li>
+            <li><span class="label">茄套</span><span class="value">Cuban Criollo 98</span></li>
+            <li><span class="label">陈化</span><span class="value">18 months cedar</span></li>
+            <li><span class="label">燃烧时间</span><span class="value">~45 min</span></li>
+          </ul>
+          <div class="product-price">
+            <span class="unit">¥180</span>
+            <span class="box">整盒 <span>¥1,680</span> / 10支</span>
+          </div>
+          <a href="#" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Product 2: Campana de Oro -->
+      <div class="product-card fade-up" data-category="classic">
+        <div class="product-img-wrap">
+          <img src="images/campana-de-oro.png" alt="Campana de Oro">
+          <span class="category-badge">Classic</span>
+          <span class="price-tag">¥150 / 支</span>
+        </div>
+        <div class="product-info">
+          <h3>Campana de Oro</h3>
+          <p class="product-origin">Dominican Rep. · Toro · Mild-Medium</p>
+          <div class="product-desc">
+            "金铃"系列，得名于其清脆悦耳的灰白烟灰如铃铛般精致。采用多米尼加 Cibao Valley 的温和茄衣，口感柔顺丝滑。初段是淡淡花香与烤杏仁，中段融入奶油香草，尾段留下悠长的蜂蜜余韵。非常适合下午茶时光或作为入门级品鉴。
+            <div class="en">Named "Golden Bell" for its pristine white ash. Dominican Cibao Valley wrapper delivers smooth elegance. Floral and roasted almond opening, creamy vanilla middle, lingering honey finish. Ideal afternoon companion.</div>
+          </div>
+          <ul class="detail-list">
+            <li><span class="label">规格</span><span class="value">6" × 52</span></li>
+            <li><span class="label">茄衣</span><span class="value">Dominican Connecticut</span></li>
+            <li><span class="label">茄芯</span><span class="value">Dominican Republic</span></li>
+            <li><span class="label">茄套</span><span class="value">Dominican Olor</span></li>
+            <li><span class="label">陈化</span><span class="value">12 months</span></li>
+            <li><span class="label">燃烧时间</span><span class="value">~55 min</span></li>
+          </ul>
+          <div class="product-price">
+            <span class="unit">¥150</span>
+            <span class="box">整盒 <span>¥1,380</span> / 10支</span>
+          </div>
+          <a href="#" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Product 3: Gran Cru 1887 -->
+      <div class="product-card fade-up" data-category="premium">
+        <div class="product-img-wrap">
+          <img src="images/gran-cru-1887.png" alt="Gran Cru 1887">
+          <span class="category-badge">Premium</span>
+          <span class="price-tag">¥380 / 支</span>
+        </div>
+        <div class="product-info">
+          <h3>Gran Cru 1887</h3>
+          <p class="product-origin">Cuba · Churchill · Full Body</p>
+          <div class="product-desc">
+            品牌旗舰之作，致敬1887年创始年份。100%古巴 Vuelta Abajo 烟叶，经36个月雪松木桶陈化。浓郁的深巧克力与异域香料在口腔中层层绽放，伴随着陈年橡木桶的沉稳气息。90分钟的品鉴之旅中，每一口都在展现更丰富的维度。
+            <div class="en">Our pinnacle offering honoring our founding year. 100% Cuban Vuelta Abajo tobacco, aged 36 months in cedar. Layers of dark chocolate, exotic spices, and aged oak unfold over a magnificent 90-minute journey.</div>
+          </div>
+          <ul class="detail-list">
+            <li><span class="label">规格</span><span class="value">7" × 47</span></li>
+            <li><span class="label">茄衣</span><span class="value">Cuban Habano 2000</span></li>
+            <li><span class="label">茄芯</span><span class="value">Cuba (100%)</span></li>
+            <li><span class="label">茄套</span><span class="value">Cuban Volado</span></li>
+            <li><span class="label">陈化</span><span class="value">36 months</span></li>
+            <li><span class="label">燃烧时间</span><span class="value">~90 min</span></li>
+          </ul>
+          <div class="product-price">
+            <span class="unit">¥380</span>
+            <span class="box">整盒 <span>¥3,680</span> / 10支</span>
+          </div>
+          <a href="#" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Product 4: Imperial Select -->
+      <div class="product-card fade-up" data-category="premium">
+        <div class="product-img-wrap">
+          <img src="images/imperial-select.png" alt="Imperial Select">
+          <span class="category-badge">Premium</span>
+          <span class="price-tag">¥450 / 支</span>
+        </div>
+        <div class="product-info">
+          <h3>Imperial Select</h3>
+          <p class="product-origin">Cuba · Double Churchill · Full Body</p>
+          <div class="product-desc">
+            为最具品味的鉴赏家而设。这款 Double Churchill 采用古巴与洪都拉斯混合茄芯，深邃的黑色胡椒开场后，逐渐过渡为雪松木与黑可可的醇厚风味。100分钟的缓慢燃烧中，每一次抽吸都在解锁新的味觉维度——皮革、泥土、微甜的干燥水果，值得耐心品味。
+            <div class="en">Reserved for the most discerning connoisseur. Cuban-Honduran blend opens with black pepper, evolves into cedar and dark cocoa. Over 100 minutes, each draw reveals new dimensions — leather, earth, and subtle dried fruit.</div>
+          </div>
+          <ul class="detail-list">
+            <li><span class="label">规格</span><span class="value">7¾" × 49</span></li>
+            <li><span class="label">茄衣</span><span class="value">Cuban Corojo</span></li>
+            <li><span class="label">茄芯</span><span class="value">Cuba + Honduras</span></li>
+            <li><span class="label">茄套</span><span class="value">Cuban Criollo</span></li>
+            <li><span class="label">陈化</span><span class="value">30 months</span></li>
+            <li><span class="label">燃烧时间</span><span class="value">~100 min</span></li>
+          </ul>
+          <div class="product-price">
+            <span class="unit">¥450</span>
+            <span class="box">整盒 <span>¥4,280</span> / 10支</span>
+          </div>
+          <a href="#" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Product 5: Maduro Clásico -->
+      <div class="product-card fade-up" data-category="reserve">
+        <div class="product-img-wrap">
+          <img src="images/maduro-classico.png" alt="Maduro Clásico">
+          <span class="category-badge">Reserve</span>
+          <span class="price-tag">¥220 / 支</span>
+        </div>
+        <div class="product-info">
+          <h3>Maduro Clásico</h3>
+          <p class="product-origin">Nicaragua · Robusto · Medium-Full</p>
+          <div class="product-desc">
+            经典 Maduro 工艺的极致演绎。采用 Connecticut Broadleaf 深色茄衣，经过严苛的自然发酵处理，呈现出油润深邃的色泽。浓郁的浓缩咖啡与焦糖香甜交织，尾段是深色浆果的微酸与黑巧克力的苦甜平衡。口感饱满而不失细腻，是 Maduro 爱好者的必试之选。
+            <div class="en">The ultimate expression of classic Maduro craftsmanship. Connecticut Broadleaf wrapper through rigorous natural fermentation reveals an oily, deep-hued leaf. Rich espresso intertwines with caramel sweetness, finishing with dark berry and bittersweet chocolate.</div>
+          </div>
+          <ul class="detail-list">
+            <li><span class="label">规格</span><span class="value">5" × 50</span></li>
+            <li><span class="label">茄衣</span><span class="value">Conn. Broadleaf Maduro</span></li>
+            <li><span class="label">茄芯</span><span class="value">Nicaragua (Estelí+Jalapa)</span></li>
+            <li><span class="label">茄套</span><span class="value">Nicaraguan Criollo</span></li>
+            <li><span class="label">陈化</span><span class="value">24 months</span></li>
+            <li><span class="label">燃烧时间</span><span class="value">~50 min</span></li>
+          </ul>
+          <div class="product-price">
+            <span class="unit">¥220</span>
+            <span class="box">整盒 <span>¥2,080</span> / 10支</span>
+          </div>
+          <a href="#" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- Product 6: Vintage Especial -->
+      <div class="product-card fade-up" data-category="reserve">
+        <div class="product-img-wrap">
+          <img src="images/vintage-especial.png" alt="Vintage Especial">
+          <span class="category-badge">Reserve</span>
+          <span class="price-tag">¥520 / 支</span>
+        </div>
+        <div class="product-info">
+          <h3>Vintage Especial</h3>
+          <p class="product-origin">Nicaragua · Toro Gordo · Medium-Full</p>
+          <div class="product-desc">
+            年度限量臻品，每一支都经过至少5年的漫长陈化。尼加拉瓜与秘鲁烟叶的精妙搭配，在时间的催化下呈现出非凡的复杂度。干杏果的清甜、大溪地香草的醇厚、烤核桃的坚果香——每一口都是一场感官的奢华旅行。年产仅5,000盒，附有独立编号证书。
+            <div class="en">Annual limited edition, each cigar aged a minimum of 5 years. Nicaraguan-Peruvian blend achieves extraordinary complexity through time. Dried apricot, Tahitian vanilla, and toasted walnut create an unforgettable sensory journey. Limited to 5,000 boxes annually with numbered certificate.</div>
+          </div>
+          <ul class="detail-list">
+            <li><span class="label">规格</span><span class="value">6" × 54</span></li>
+            <li><span class="label">茄衣</span><span class="value">Nicaraguan Habano</span></li>
+            <li><span class="label">茄芯</span><span class="value">Nicaragua + Peru</span></li>
+            <li><span class="label">茄套</span><span class="value">Nicaraguan Corojo</span></li>
+            <li><span class="label">陈化</span><span class="value">60 months</span></li>
+            <li><span class="label">燃烧时间</span><span class="value">~60 min</span></li>
+          </ul>
+          <div class="product-price">
+            <span class="unit">¥520</span>
+            <span class="box">整盒 <span>¥4,980</span> / 10支</span>
+          </div>
+          <a href="#" class="learn-more">Learn More →</a>
+        </div>
+      </div>
+
+    </div><!-- /products-grid -->
+  </div><!-- /container -->
+</section>
+
+<!-- ===== CRAFTSMANSHIP ===== -->
+<section class="craftsmanship" id="craftsmanship">
+  <div class="container">
+    <h2 class="section-title fade-up">Craftsmanship</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-subtitle fade-up">Every Casa Real cigar is the result of an unhurried, meticulous process passed down through generations.</p>
+
+    <div class="craft-step fade-up">
+      <div class="craft-img">🌱</div>
+      <div class="craft-text">
+        <span class="step-num">Step 01 — Cultivation</span>
+        <h3>Seed to Harvest</h3>
+        <p>Our tobacco begins as carefully selected seeds planted in the richest soils of Cuba, Nicaragua, and the Dominican Republic. Each plant is tended by hand — from the first delicate seedling to the moment the priming leaves are harvested at peak maturity. Only the finest leaves earn the Casa Real name.</p>
+      </div>
+    </div>
+
+    <div class="craft-step fade-up">
+      <div class="craft-img">🍃</div>
+      <div class="craft-text">
+        <span class="step-num">Step 02 — Fermentation</span>
+        <h3>The Art of Fermentation</h3>
+        <p>Harvested leaves enter a carefully controlled fermentation process lasting weeks to months. Natural heat and humidity break down harsh compounds while concentrating flavors. Our master fermenters turn and inspect each pilón daily, ensuring the leaves develop their full aromatic potential.</p>
+      </div>
+    </div>
+
+    <div class="craft-step fade-up">
+      <div class="craft-img">✋</div>
+      <div class="craft-text">
+        <span class="step-num">Step 03 — Rolling & Aging</span>
+        <h3>Hand-Rolled Perfection</h3>
+        <p>Expert torcedores assemble each cigar using the traditional entubar method — bunching each filler leaf individually for a flawless draw. After rolling, cigars rest in Spanish cedar aging rooms where the tobaccos marry into a harmonious whole, emerging ready to deliver an extraordinary smoking experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TASTING NOTES ===== -->
+<section class="tasting" id="tasting">
+  <div class="container">
+    <h2 class="section-title fade-up">Tasting Notes</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-subtitle fade-up">A guide to the flavor profiles and aromatic characteristics found in our collection.</p>
+    <div class="tasting-grid">
+      <div class="tasting-card fade-up">
+        <span class="tasting-icon">🪵</span>
+        <h4>Cedar</h4>
+        <p>Aromatic cedarwood provides a warm, dry foundation present across our entire range.</p>
+        <div class="strength-bar"><div class="strength-fill" style="width:85%"></div></div>
+      </div>
+      <div class="tasting-card fade-up">
+        <span class="tasting-icon">🍫</span>
+        <h4>Chocolate</h4>
+        <p>Rich cocoa and dark chocolate notes, especially pronounced in our Maduro and Premium lines.</p>
+        <div class="strength-bar"><div class="strength-fill" style="width:75%"></div></div>
+      </div>
+      <div class="tasting-card fade-up">
+        <span class="tasting-icon">🌶️</span>
+        <h4>Pepper</h4>
+        <p>White and black pepper spice that adds complexity and a pleasant warming sensation.</p>
+        <div class="strength-bar"><div class="strength-fill" style="width:65%"></div></div>
+      </div>
+      <div class="tasting-card fade-up">
+        <span class="tasting-icon">🌰</span>
+        <h4>Nutty</h4>
+        <p>Almond, walnut, and hazelnut undertones that bring a comforting sweetness to the finish.</p>
+        <div class="strength-bar"><div class="strength-fill" style="width:60%"></div></div>
+      </div>
+      <div class="tasting-card fade-up">
+        <span class="tasting-icon">🌾</span>
+        <h4>Leather</h4>
+        <p>Fine leather notes adding depth and an old-world character reminiscent of a gentleman's study.</p>
+        <div class="strength-bar"><div class="strength-fill" style="width:50%"></div></div>
+      </div>
+      <div class="tasting-card fade-up">
+        <span class="tasting-icon">🍯</span>
+        <h4>Honey</h4>
+        <p>A natural, delicate sweetness that lingers on the palate — especially in our milder blends.</p>
+        <div class="strength-bar"><div class="strength-fill" style="width:40%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT & LOUNGE ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title fade-up">Visit Our Lounge</h2>
+    <div class="divider fade-up"></div>
+    <p class="section-subtitle fade-up">Experience Casa Real in person at our flagship lounge in the heart of Paris.</p>
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <div class="contact-item">
+          <h4>Address</h4>
+          <p>42 Rue du Faubourg Saint-Honoré<br>75008 Paris, France</p>
+        </div>
+        <div class="contact-item">
+          <h4>Telephone</h4>
+          <p><a href="tel:+33142650087">+33 1 42 65 00 87</a></p>
+        </div>
+        <div class="contact-item">
+          <h4>Hours</h4>
+          <p>Monday — Saturday: 14:00 – 23:00<br>Sunday: 15:00 – 21:00</p>
+        </div>
+        <div class="contact-item">
+          <h4>Email</h4>
+          <p><a href="mailto:concierge@casareal.com">concierge@casareal.com</a></p>
+        </div>
+      </div>
+      <form class="contact-form fade-up" onsubmit="event.preventDefault()">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your full name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Private tasting, consultation, etc.">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="How may we assist you?" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">CASA REAL</div>
+      <div class="footer-links">
+        <a href="#heritage">Heritage</a>
+        <a href="#collection">Collection</a>
+        <a href="#craftsmanship">Craftsmanship</a>
+        <a href="#tasting">Tasting</a>
+        <a href="#contact">Lounge</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WeChat">WX</a>
+        <a href="#" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Casa Real Cigars. All rights reserved. &nbsp;|&nbsp; Smoke responsibly. Not for sale to minors.
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function(){
+  // === Nav scroll effect ===
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // === Mobile hamburger ===
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  // === IntersectionObserver fade-up ===
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(function(el){
+    observer.observe(el);
+  });
+
+  // === Category filter ===
+  const catBtns = document.querySelectorAll('.cat-btn');
+  const productCards = document.querySelectorAll('.product-card');
+  catBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      catBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      productCards.forEach(function(card){
+        if(filter === 'all' || card.getAttribute('data-category') === filter){
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
